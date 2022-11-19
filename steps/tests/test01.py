@@ -1,3 +1,4 @@
+import unittest
 import numpy as np
 
 class Variable:
@@ -78,8 +79,6 @@ def numerical_diff(f, x, eps=1e-4):
 
 
 
-import unittest
-
 #무조건 메소드는 test_로 시작해야만 한다.
 class SquareTest(unittest.TestCase):
 	def test_forward(self):
@@ -102,8 +101,3 @@ class SquareTest(unittest.TestCase):
 		num_grad = numerical_diff(square, x)
 		flg  = np.allclose(x.grad, num_grad)
 		self.assertTrue(flg)
-
-
-# 이놈이 있으면 그냥 파이썬 실행하듯이 하기
-# 없으면 -m unittest 필수
-# unittest.main()

@@ -1,0 +1,27 @@
+cuda
+2022-11-26 07:39:38,562 - root - INFO - Task Started
+2022-11-26 07:39:38,563 - root - INFO - [1/1] Data Preparing - Start
+Traceback (most recent call last):
+  File "/opt/ml/lightning/lightgcn/train.py", line 61, in <module>
+    main()
+  File "/opt/ml/lightning/lightgcn/train.py", line 24, in main
+    train_data, test_data, n_node = prepare_dataset(
+  File "/opt/ml/lightning/lightgcn/lightgcn/datasets.py", line 8, in prepare_dataset
+    data = load_data(basepath)
+  File "/opt/ml/lightning/lightgcn/lightgcn/datasets.py", line 24, in load_data
+    data1 = pd.read_csv(path1)
+  File "/opt/conda/envs/gcn/lib/python3.10/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/envs/gcn/lib/python3.10/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/envs/gcn/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/conda/envs/gcn/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/conda/envs/gcn/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/opt/conda/envs/gcn/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/opt/conda/envs/gcn/lib/python3.10/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/ml/input/data/train_data.csv'

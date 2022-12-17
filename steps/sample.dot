@@ -1,0 +1,13 @@
+digraph g{
+	1 [label="x", color=green, style=filled]
+	2 [label="", color=green, style=filled]
+	3 [label="gy", color=green, style=filled]
+	4 [label="gx", color=green, style=filled]
+	5 [label="*", color=darkgreen, style=filled, shape=box, fontcolor=white]
+	6 [label="cos", color=darkgreen, style=filled, shape=box, fontcolor=white]
+	1 -> 6
+	6 -> 2
+	2 -> 5
+	3 -> 5
+	5 -> 4
+}
